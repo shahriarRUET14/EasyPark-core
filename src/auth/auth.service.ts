@@ -64,13 +64,12 @@ export class AuthService {
         HttpStatus.UNPROCESSABLE_ENTITY,
       );
     }
-
     if (!user.password) {
       throw new HttpException(
         {
           status: HttpStatus.UNPROCESSABLE_ENTITY,
           errors: {
-            password: 'incorrectPassword',
+            password: 'incorrect Password',
           },
         },
         HttpStatus.UNPROCESSABLE_ENTITY,
